@@ -53,7 +53,7 @@
 	<!-- Nav -->
 	<nav class="flex items-center justify-between px-6 py-3 border-b border-white/10">
 		<span class="font-bold text-lg tracking-tight text-white">
-			xjmzx.github.io
+			adjmx.github.io
 		</span>
 		{#if user}
 			<a
