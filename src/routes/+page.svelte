@@ -25,7 +25,7 @@
 		try {
 			const [userRes, reposRes] = await Promise.all([
 				fetch(`https://api.github.com/users/${FEATURED_USER}`),
-				fetch(`https://api.github.com/users/${FEATURED_USER}/repos?sort=updated&per_page=6`)
+				fetch(`https://api.github.com/users/${FEATURED_USER}/repos?sort=updated&per_page=5`)
 			]);
 			if (userRes.ok) user = await userRes.json();
 			if (reposRes.ok) repos = await reposRes.json();
@@ -225,6 +225,9 @@
 	{/if}
 
 	<footer class="text-center text-sm text-white/25 pb-6">
-		<a href="https://svelte.dev" class="hover:text-white/50 transition-colors">Built with Svelte</a>
+		<a href="https://svelte.dev" class="inline-flex items-center gap-2 hover:text-white/50 transition-colors">
+			<img src="/svelte1.png" alt="Svelte" class="h-4 w-4 opacity-40 hover:opacity-70 transition-opacity" />
+			Built with Svelte
+		</a>
 	</footer>
 </main>
